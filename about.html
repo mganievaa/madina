@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Madina Ganieva</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="./src/style.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #F1F1F1;
+            --text: #1D0000;
+            --accent: #8F0000;
+            --white: #F1F1F1;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+
+
+        .page {
+            min-height: 100vh;
+            background: var(--bg);
+        }
+
+        .container-custom {
+            width: min(100%, 1920px);
+            margin: 0 auto;
+            padding-left: clamp(20px, 5vw, 160px);
+            padding-right: clamp(20px, 5vw, 160px);
+            padding-top: clamp(28px, 4.6vw, 88px);
+            padding-bottom: clamp(40px, 6vw, 120px);
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 90px;
+        }
+
+        .brand {
+            font-family: 'Forum', serif;
+            font-weight: 400;
+            font-size: clamp(40px, 4vw, 64px);
+            line-height: 1.1;
+            color: var(--text);
+            text-decoration: none;
+            position: relative;
+            z-index: 20;
+        }
+
+        .nav-desktop {
+            display: flex;
+            align-items: center;
+            gap: clamp(20px, 2vw, 46px);
+        }
+
+        .nav-desktop a {
+            text-decoration: none;
+            color: var(--text);
+            font-size: clamp(18px, 2vw, 40px);
+            font-weight: 400;
+            line-height: 1.2;
+            transition: .2s ease;
+        }
+
+        .nav-desktop a:hover {
+            color: var(--accent);
+        }
+
+
+        .about-top {
+            display: grid;
+            grid-template-columns: 500px minmax(0, 1fr);
+            gap: clamp(50px, 7vw, 154px);
+            align-items: start;
+            margin-bottom: 120px;
+        }
+
+        .photo-block {
+            position: relative;
+            width: 100%;
+            min-height: 620px;
+        }
+
+        .photo-outline {
+            position: absolute;
+            width: 418px;
+            height: 523px;
+            left: 67px;
+            top: 65px;
+            border: 5px solid var(--text);
+            z-index: 1;
+        }
+
+        .photo-image {
+            position: absolute;
+            width: 400px;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            display: block;
+        }
+
+        .photo-clip {
+            position: absolute;
+            width: 151px;
+            left: -48px;
+            top: -46px;
+            transform: rotate(-88.47deg);
+            z-index: 3;
+            display: block;
+        }
+
+        .section-title {
+            margin: 0 0 28px 0;
+            font-family: 'Forum', serif;
+            font-weight: 400;
+            font-size: clamp(52px, 5vw, 96px);
+            line-height: 1.1;
+            color: var(--accent);
+        }
+
+        .about-text {
+            max-width: 711px;
+            font-size: 24px;
+            line-height: 1.24;
+            letter-spacing: 0.05em;
+        }
+
+        .about-text p {
+            margin: 0 0 22px 0;
+        }
+
+        .about-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .bottom-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            gap: clamp(40px, 7vw, 130px);
+            align-items: start;
+        }
+
+        .info-text {
+            font-size: 24px;
+            line-height: 1.24;
+            letter-spacing: 0.05em;
+        }
+
+        .info-text p {
+            margin: 0 0 18px 0;
+        }
+
+        .info-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .contacts strong {
+            font-weight: 700;
+        }
+
+
+        @media (max-width: 1199.98px) {
+            .about-top {
+                grid-template-columns: 420px minmax(0, 1fr);
+                gap: 60px;
+            }
+
+            .photo-block {
+                min-height: 540px;
+            }
+
+            .photo-outline {
+                width: 350px;
+                height: 440px;
+                left: 55px;
+                top: 55px;
+            }
+
+            .photo-image {
+                width: 335px;
+            }
+
+            .photo-clip {
+                width: 120px;
+                left: -38px;
+                top: -36px;
+            }
+
+            .about-text,
+            .info-text {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .topbar {
+                margin-bottom: 60px;
+            }
+
+
+            .about-top {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                margin-bottom: 80px;
+            }
+
+            .photo-block {
+                width: 420px;
+                max-width: 100%;
+                min-height: 520px;
+            }
+
+            .bottom-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .about-text,
+            .info-text {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 428px) {
+            .page {
+                min-height: 1319px;
+            }
+
+            .container-custom {
+                width: 100%;
+                padding-left: 48px;
+                padding-right: 51px;
+                padding-top: 35px;
+                padding-bottom: 29px;
+            }
+
+            .topbar {
+                margin-bottom: 62px;
+            }
+
+            .brand {
+                font-size: 40px;
+                line-height: 44px;
+            }
+
+            .about-top {
+                display: block;
+                margin-bottom: 52px;
+            }
+
+            .photo-block {
+                width: 100%;
+                min-height: 386px;
+                margin-bottom: 45px;
+            }
+
+            .photo-outline {
+                width: 283px;
+                height: 355px;
+                left: 46px;
+                top: 44px;
+                border: 5px solid var(--text);
+            }
+
+            .photo-image {
+                width: 271px;
+                left: 0;
+                top: 0;
+            }
+
+            .photo-clip {
+                width: 102.17px;
+                left: -32px;
+                top: -30px;
+                transform: rotate(-88.47deg);
+            }
+
+            .section-title {
+                font-size: 48px;
+                line-height: 1.16;
+                margin-bottom: 16px;
+            }
+
+            .about-text {
+                max-width: 328px;
+                font-size: 12px;
+                line-height: 1.16;
+                letter-spacing: 0.05em;
+            }
+
+            .about-text p {
+                margin: 0 0 12px 0;
+            }
+
+            .bottom-grid {
+                display: block;
+            }
+
+            .bottom-grid>div:first-child {
+                margin-top: 0;
+            }
+
+            .bottom-grid>div:last-child {
+                margin-bottom: 0;
+            }
+
+            .exhibitions-block {
+                margin-bottom: 38px;
+            }
+
+            .contacts-block {
+                margin-bottom: 0;
+            }
+
+            .info-text {
+                font-size: 12px;
+                line-height: 1.16;
+                letter-spacing: 0.05em;
+                max-width: 278px;
+            }
+
+            .contacts .info-text {
+                max-width: 262px;
+            }
+
+            .info-text p {
+                margin: 0 0 10px 0;
+            }
+
+            .contacts .info-text p:last-child {
+                margin-top: 18px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+        <div class="container-custom">
+            <header class="topbar">
+                <a href="index.html" class="brand">MG</a>
+
+                <nav class="nav-desktop">
+                    <a href="work.html">WORK</a>
+                    <a href="about.html">ABOUT</a>
+                </nav>
+
+                <button class="burger" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </header>
+
+            <section class="about-top">
+                <div class="photo-block">
+                    <img src="./src/clip.png" alt="Paper clip" class="photo-clip">
+                    <div class="photo-outline"></div>
+                    <img src="./src/photo.png" alt="Madina Ganieva portrait" class="photo-image">
+                </div>
+
+                <div>
+                    <h1 class="section-title">About</h1>
+
+                    <div class="about-text">
+                        <p>
+                            I am a graphic design student working across digital media, with a focus on
+                            graphic design, photography, videography, and content creation. I am interested
+                            in creating work that emphasizes clarity, structure, and strong visual composition.
+                        </p>
+
+                        <p>
+                            My practice is informed by minimalism and a curiosity for cultural references.
+                            I enjoy exploring how elements of culture, tradition, and visual heritage can
+                            shape and enrich contemporary design, particularly within digital environments.
+                        </p>
+
+                        <p>
+                            Alongside my studies, I have gained practical experience across design and media
+                            production, which continues to influence my approach toward developing cohesive
+                            and adaptable visual outcomes.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bottom-grid">
+                <div class="exhibitions-block">
+                    <h2 class="section-title">Exhibitions</h2>
+
+                    <div class="info-text">
+                        <p>
+                            Project “DARK MATTER” Selected for Behind the Label.
+                            Exhibition Milk Bar, VCA, University of Melbourne,
+                            Southbank, Melbourne, VIC. Group exhibition, 2025
+                        </p>
+
+                        <p>
+                            Project “Suhbat” Selected for the EYE Exhibition, VCA,
+                            University of Melbourne, Southbank, Melbourne, VIC.
+                            Group exhibition, 2025
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contacts-block contacts">
+                    <h2 class="section-title">Contacts</h2>
+
+                    <div class="info-text">
+                        <p><strong>Gmail:</strong> madinaganieva1437@gmail.com</p>
+                        <p><strong>Instagram:</strong> @mg.nvv</p>
+                        <p><strong>Behnace:</strong> behance.net/madinaganieva</p>
+                        <p>CV can be sent upon request</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <div class="mobile-menu-top">
+                <a href="index.html" class="mobile-brand">MG</a>
+                
+            </div>
+
+            <nav class="mobile-nav">
+                <a href="work.html">WORK</a>
+                <a href="about.html">ABOUT</a>
+            </nav>
+        </div>
+    </div>
+
+    <script src="./src/script.js"></script>
+
+</body>
+
+</html>

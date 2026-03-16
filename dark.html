@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahoré - Madina Ganieva</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link href="./src/style.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #F1F1F1;
+            --text: #1D0000;
+            --accent: #8F0000;
+            --white: #F1F1F1;
+            --content-width: 1554px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+
+
+        .page {
+            min-height: 100vh;
+            background: var(--bg);
+        }
+
+        .container-custom {
+            width: min(100%, 1920px);
+            margin: 0 auto;
+            padding-left: clamp(20px, 5vw, 160px);
+            padding-right: clamp(20px, 5vw, 160px);
+            padding-top: clamp(28px, 4.6vw, 88px);
+            padding-bottom: clamp(32px, 5vw, 80px);
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: clamp(48px, 6vw, 96px);
+        }
+
+        .brand {
+            font-family: 'Forum', serif;
+            font-weight: 400;
+            font-size: clamp(40px, 4vw, 64px);
+            line-height: 1.1;
+            color: var(--text);
+            text-decoration: none;
+            position: relative;
+            z-index: 20;
+        }
+
+        .nav-desktop {
+            display: flex;
+            align-items: center;
+            gap: clamp(20px, 2vw, 46px);
+        }
+
+        .nav-desktop a {
+            text-decoration: none;
+            color: var(--text);
+            font-size: clamp(18px, 2vw, 40px);
+            font-weight: 400;
+            line-height: 1.2;
+            transition: .2s ease;
+        }
+
+        .nav-desktop a:hover {
+    color: var(--accent);
+        }
+
+
+
+        .project-wrap {
+            max-width: var(--content-width);
+            margin: 0 auto;
+        }
+
+        .project-title {
+            margin: 0 0 18px 0;
+            font-family: 'Forum', serif;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 1.154;
+            color: var(--accent);
+        }
+
+        .project-text {
+            max-width: 1554px;
+            margin: 0 0 80px 0;
+            font-size: 24px;
+            line-height: 1.24;
+            letter-spacing: 0.05em;
+            color: var(--text);
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 104px;
+        }
+
+        .gallery-item {
+            width: 100%;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            background: #e7e7e7;
+        }
+
+
+        @media (max-width: 991.98px) {
+
+            .project-title {
+                font-size: 42px;
+            }
+
+            .project-text {
+                font-size: 18px;
+                margin-bottom: 48px;
+            }
+
+            .gallery {
+                gap: 36px;
+            }
+        }
+
+        @media (max-width: 428px) {
+            .container-custom {
+                width: 100%;
+                padding-left: 48px;
+                padding-right: 51px;
+                padding-top: 35px;
+                padding-bottom: 32px;
+            }
+
+            .topbar {
+                margin-bottom: 54px;
+            }
+
+            .brand {
+                font-size: 40px;
+                line-height: 44px;
+            }
+
+            .project-wrap {
+                max-width: 328px;
+                margin: 0;
+            }
+
+            .project-title {
+                font-size: 24px;
+                line-height: 1.16;
+                margin: 0 0 10px 0;
+            }
+
+            .project-text {
+                max-width: 328px;
+                font-size: 12px;
+                line-height: 1.16;
+                letter-spacing: 0.05em;
+                margin: 0 0 26px 0;
+            }
+
+            .gallery {
+                gap: 16px;
+            }
+
+            .gallery-item img {
+                width: 328px;
+                max-width: 100%;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+        <div class="container-custom">
+            <header class="topbar">
+                <a href="index.html" class="brand">MG</a>
+
+                <nav class="nav-desktop">
+                    <a href="work.html">WORK</a>
+                    <a href="about.html">ABOUT</a>
+                </nav>
+
+                <button class="burger" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </header>
+
+            <section class="project-wrap">
+                <h1 class="project-title">DARK MATTER</h1>
+
+                <div class="project-text">
+                    DARK MATTER is a speculative packaging project that confronts the hidden human cost behind everyday chocolate consumption. Commercial packaging often sells indulgence, heritage, and craft - yet rarely acknowledges the troubling realities of cocoa production, particularly the widespread use of child labor.
+
+Drawing on credible open-source data from the NORC 2020 Cocoa Report, the project reframes familiar chocolate branding into a platform for ethical confrontation. Across five product types each design exposes a different facet of exploitation in the cocoa supply chain. The packaging visualises real statistics, including:
+
+1.56 million children involved in cocoa production in Côte d'Ivoire and Ghana
+42% of child laborers using dangerous tools such as machetes
+24% exposed to harmful agrochemicals
+A 62% increase in cocoa production from 2008-2019 paralleled by a rise in child labor despite global intervention efforts
+
+Rather than treating infographics as an add-on, each package integrates the data directly into its visual structure. Stylised cacao pods - sliced vertically or transformed into pie charts — carry the statistics within their form, making the information inseparable from the product.
+
+The design language adopts a muted brown-beige palette, minimalist typography, negative space and clean geometric illustrations - echoing the visual polish of high-end chocolate brands. This deliberate luxury aesthetic creates a striking dissonance: an exterior that feels elegant and desirable reveals deeply uncomfortable truths.
+
+This tension is heightened by chocolate's cultural association with childhood joy. The system subtly plays on this irony: one child enjoys a sweet, while another labors to produce it. At first glance, the data-integrated visuals may feel approachable, even playful, echoing packaging that appeals to families.
+
+Yet, instead of masking reality, the designs expose it - reframing the language of premium branding into a clear-eyed reflection on the human cost behind the treat.
+                </div>
+
+                <section class="gallery">
+                    <div class="gallery-item">
+                        <img src="./src/dark/dark1.jpg" alt="Dark Matter project image 1">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="./src/dark/dark2.jpg" alt="Dark Matter project image 2">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="./src/dark/dark3.jpg" alt="Dark Matter project image 3">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="./src/dark/dark4.jpg" alt="Dark Matter project image 4">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="./src/dark/dark5.jpg" alt="Dark Matter project image 5">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="./src/dark/dark6.jpg" alt="Dark Matter project image 6">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="./src/dark/dark7.jpg" alt="Dark Matter project image 7">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="./src/dark/dark8.jpg" alt="Dark Matter project image 8">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="./src/dark/dark9.jpg" alt="Dark Matter project image 9">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="./src/dark/dark10.jpg" alt="Dark Matter project image 10">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="./src/dark/dark11.jpg" alt="Dark Matter project image 11">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="./src/dark/dark12.jpg" alt="Dark Matter project image 12">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="./src/dark/dark13.jpg" alt="Dark Matter project image 13">
+                    </div>
+
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <div class="mobile-menu-top">
+                <a href="index.html" class="mobile-brand">MG</a>
+                
+            </div>
+
+            <nav class="mobile-nav">
+                <a href="work.html">WORK</a>
+                <a href="about.html">ABOUT</a>
+            </nav>
+        </div>
+    </div>
+
+    <script src="./src/script.js"></script>
+</body>
+
+</html>
